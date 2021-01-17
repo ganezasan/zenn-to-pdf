@@ -1,0 +1,21 @@
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+.code-block-container > pre {
+  white-space: pre-wrap;
+}
+
+.fullscreen-page header > img {
+  width: 450px;
+}
+
+.fullscreen-page header > h1 {
+  font-size: 32px;
+}
+
+
+@page {
+  size: auto;
+  margin: 3cm;
+}

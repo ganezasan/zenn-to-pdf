@@ -1,0 +1,35 @@
+{
+  "name": "zenn-export-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "export.mjs",
+  "type": "module",
+  "scripts": {
+    "export": "node export.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganezasan/zenn-export-pdf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.8.x"
+  },
+  "bugs": {
+    "url": "https://github.com/ganezasan/zenn-export-pdf/issues"
+  },
+  "homepage": "https://github.com/ganezasan/zenn-export-pdf#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "puppeteer": "^5.5.0",
+    "puppeteer-extra": "^3.1.16",
+    "puppeteer-extra-plugin-stealth": "^2.6.6",
+    "readline-promise": "^1.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  }
+}
