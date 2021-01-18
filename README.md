@@ -1,4 +1,4 @@
-# zenn-export-pdf
+# zenn-to-pdf
 This tool uses puppeteer to export zenn article as PDF.
 In order to use the top-level `await` feature, you need to use Node version newer than `14.8.0`.
 
@@ -42,12 +42,12 @@ TWO_FA_TOOL=APP
 ```
 $ npm run export
 
-> zenn-export-pdf@1.0.0 export /Users/ganezasan/repos/private/zenn-export-pdf
+> zenn-to-pdf@1.0.0 export /Users/ganezasan/repos/private/zenn-to-pdf
 > node export.mjs
 
 Opening chromium browser...
 Enter your G-code: ******
 Finishing up...
 The article was successfully exported to PDF 🎉
-export: /Users/ganezasan/repos/private/zenn-export-pdf/prod.pdf
+export: /Users/ganezasan/repos/private/zenn-to-pdf/prod.pdf
 ```
