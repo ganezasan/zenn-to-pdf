@@ -27,11 +27,6 @@ const exportZennArticleToPDF = async ({
   const browser = await puppeteer.launch({ headless });
   console.log('Opening chromium browser...');
 
-  const rlp = readline.default.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    terminal: true
-  });
   const page = await browser.newPage();
   const navigationPromise = page.waitForNavigation({ waitUntil: ['load', 'networkidle2'] });
   const pages = await browser.pages();
@@ -94,6 +89,13 @@ const exportZennArticleToPDF = async ({
       await page.waitForTimeout(1000);
     }
 
+    // init readline
+    const rlp = readline.default.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+      terminal: true
+    });
+
     // enter 2FA code
     const code = await rlp.questionAsync('Enter your G-code: ');
     console.log('Enter 2FA code...');
@@ -129,6 +131,7 @@ const exportZennArticleToPDF = async ({
     console.log(`export: ${process.env.PWD}/${pdfPath}`);
   }
 
+  // close
   await browser.close();
   rlp.close();
 };
