@@ -15,10 +15,10 @@ $ npm install
 > https://github.com/zenn-dev/zenn-roadmap/issues/82#issuecomment-699568915
 
 `dotenv`を利用しているので、カレントファイルに`.env`ファイルを作成し、以下の環境変数を設定してください。
-Zennのログインに利用するGoogleアカウントの2FAを有効にしていない場合は、`IS_TWO_FA`を`false`で設定してください。
+IS_TWO_FAはデフォルトが`true`になっています。Zennのログインに利用するGoogleアカウントの2FAを有効にしていない場合は、`IS_TWO_FA`を`false`で設定してください。
 
 ```
-$ vim .env
+$ mv .env.tmplate .env
 GOOGLE_EMAIL=<GOOGLE_EMAIL>
 GOOGLE_PASSWORD=<GOOGLE_PASSWORD>
 
@@ -33,6 +33,9 @@ IS_TWO_FA=true
 
 # option: Default is `APP`. You can choose `APP` or `SMS`.
 TWO_FA_TOOL=APP
+
+# option: Default is `true`. If you have an issue to run the export, you can disable `headless` mode and see the broser window.
+HEADLESS=true
 ```
 
 ## export
@@ -46,8 +49,15 @@ $ npm run export
 > node export.mjs
 
 Opening chromium browser...
+Access zenn.dev ...
+Enter email ...
+Enter password ...
+Use 2FA with challengetype: APP
 Enter your G-code: ******
-Finishing up...
+Enter 2FA code...
+Access Zenn page...
+Access artile print page...
+Export PDF...
 The article was successfully exported to PDF 🎉
 export: /Users/ganezasan/repos/private/zenn-to-pdf/prod.pdf
 ```
