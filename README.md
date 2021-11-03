@@ -1,4 +1,7 @@
 # zenn-to-pdf
+
+*20211103 - Zennの仕様に変更があり、こちらのプロジェクトは現在利用できなくなっております*
+
 This tool uses puppeteer to export zenn article as PDF.
 In order to use the top-level `await` feature, you need to use Node version newer than `14.8.0`.
 
